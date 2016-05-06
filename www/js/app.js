@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','firebase'])
+var smsapp1 = angular.module('starter', ['ionic', 'starter.controllers','firebase']);
 
-.run(function($ionicPlatform) {
+smsapp1.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -30,6 +30,15 @@ angular.module('starter', ['ionic', 'starter.controllers','firebase'])
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
+  })
+
+  .state('app.register', {
+    url: '/register',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/register.html'
+      }
+    }
   })
 
   .state('app.search', {
