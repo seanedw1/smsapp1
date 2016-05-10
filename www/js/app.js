@@ -43,6 +43,16 @@ smsapp1.run(function($ionicPlatform) {
     }
   })
 
+  .state('app.login', {
+    url: '/login',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/login.html',
+        controller:'RegistrationController'
+      }
+    }
+  })
+
   .state('app.search', {
     url: '/search',
     views: {
@@ -61,11 +71,11 @@ smsapp1.run(function($ionicPlatform) {
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.profile', {
+      url: '/profile',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/profile.html'
         }
       }
     });
