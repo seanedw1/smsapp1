@@ -39,20 +39,17 @@ smsapp1.factory('Authentication',
     }, //require Authentication
 
     register: function(user) {
+      console.log('user', user);
       auth.$createUser({
         email: user.email,
         password: user.password
       }).then(function(regUser) {
 
-        var regRef = new Firebase(FIREBASE_URL + 'users')
-        .child(regUser.uid).set({
-          date: Firebase.ServerValue.TIMESTAMP,
-          regUser: regUser.uid,
-          firstname: user.firstname,
-          lastname: user.lastname,
-          email:  user.email
-        }); //user info
-
+        var firebaseUser = $firebaseObject(new Firebase(FIREBASE_URL + 'users/'+ regUser.uid))
+        firebaseUser.date = Firebase.ServerValue.TIMESTAMP;
+        firebaseUser.username = user.username;
+        firebaseUser.email =  user.email;
+        firebaseUser.$save();
         myObject.login(user);
 
       }).catch(function(error) {

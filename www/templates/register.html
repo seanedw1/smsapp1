@@ -9,7 +9,7 @@
     <br>
     <Br>
 
-    <form name="myform" cng-submit="register()">
+    <form name="myform" ng-submit="register(user)">
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Username</span>
@@ -21,7 +21,7 @@
         </label>
         <label class="item item-input">
           <span class="input-label">Email</span>
-          <input type="password" ng-model="user.email">
+          <input type="email" ng-model="user.email">
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Submit</button>

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var smsapp1 = angular.module('starter', ['ionic', 'starter.controllers','firebase'])
+var smsapp1 = angular.module('starter', ['ionic', 'firebase'])
 .constant('FIREBASE_URL', 'https://smsapp1.firebaseio.com/');
 
 smsapp1.run(function($ionicPlatform) {
