@@ -21,7 +21,7 @@ smsapp1.factory('Authentication',
   var myObject = {
     login: function(user) {
       auth.$authWithPassword({
-        email: user.email,
+        username: user.username,
         password: user.password
       }).then(function(regUser) {
         $location.path('/chat');
@@ -36,6 +36,7 @@ smsapp1.factory('Authentication',
 
     requireAuth: function() {
       return auth.$requireAuth();
+      $location.path('/chat');
     }, //require Authentication
 
     register: function(user) {
