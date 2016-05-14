@@ -8,7 +8,6 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   //});
 
   // Form data for the login modal
-  $scope.loginData = {};
 })
 
 
@@ -17,7 +16,7 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   function($scope, Authentication) {
 
   $scope.login = function() {
-    Authentication.login($scope.loginData);
+    Authentication.login($scope.user);
   }; //login
 
   $scope.logout = function() {

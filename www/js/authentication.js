@@ -24,7 +24,7 @@ smsapp1.factory('Authentication',
         username: user.username,
         password: user.password
       }).then(function(regUser) {
-        $location.path('/chat');
+  console.log("sign in successful");
       }).catch(function(error) {
        $rootScope.message = error.message;
       });
@@ -36,7 +36,6 @@ smsapp1.factory('Authentication',
 
     requireAuth: function() {
       return auth.$requireAuth();
-      $location.path('/chat');
     }, //require Authentication
 
     register: function(user) {
@@ -50,6 +49,7 @@ smsapp1.factory('Authentication',
         firebaseUser.date = Firebase.ServerValue.TIMESTAMP;
         firebaseUser.username = user.username;
         firebaseUser.email =  user.email;
+        firebaseUser.password =  user.password;
         firebaseUser.$save();
         myObject.login(user);
 
