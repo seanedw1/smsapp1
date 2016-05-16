@@ -21,10 +21,10 @@ smsapp1.factory('Authentication',
   var myObject = {
     login: function(user) {
       auth.$authWithPassword({
-        username: user.username,
+        email: user.email,
         password: user.password
       }).then(function(regUser) {
-  console.log("sign in successful");
+      console.log($scope.user);
       }).catch(function(error) {
        $rootScope.message = error.message;
       });
@@ -49,7 +49,6 @@ smsapp1.factory('Authentication',
         firebaseUser.date = Firebase.ServerValue.TIMESTAMP;
         firebaseUser.username = user.username;
         firebaseUser.email =  user.email;
-        firebaseUser.password =  user.password;
         firebaseUser.$save();
         myObject.login(user);
 

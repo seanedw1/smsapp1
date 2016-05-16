@@ -6,22 +6,22 @@
     </div>
   </ion-header-bar>
   <ion-content>
-    <form name ="myform" ng-submit="login()" novalidate>
+    <form name ="myform" ng-submit="login()">
       <h1>Hi there!</h1>
       <p class="welcome">Log-in to access the awesomeness!</p>
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <input type="text" ng-model="user.email">
         </label>
         <label class="item item-input">
           <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="password" ng-model="user.password">
         </label>
         <label class="item">
           <button type="submit" class="button button-block button-balanced"
       ng-disabled="myform.$invalid" type="submit">Login</button>
-    <p class="welcome">or <a href="./register">register</a></p>
+    <p class="welcome">or <a href="#/register">register</a></p>
         </label>
       </div>
     </form>

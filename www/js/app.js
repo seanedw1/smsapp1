@@ -66,7 +66,8 @@ smsapp1.run(function($ionicPlatform) {
     url: '/chat',
     views: {
       'menuContent': {
-        templateUrl: 'templates/chat.html'
+        templateUrl: 'templates/chat.html',
+        authenticate: true
       }
     }
   })
@@ -80,5 +81,5 @@ smsapp1.run(function($ionicPlatform) {
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/search');
+  $urlRouterProvider.otherwise('/app/login');
 });
