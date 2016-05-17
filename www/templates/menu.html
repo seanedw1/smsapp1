@@ -19,20 +19,20 @@
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/login">
-          Login
+          <i class="icon ion-log-in"></i> Login
         </ion-item>
         <ion-item menu-close href="#/app/profile">
-        Profile
+        <i class="icon ion-person"></i> Profile
         </ion-item>
         <ion-list>
-          <ion-item menu-close href="#/app/chat">
-            Chat
+          <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/chat">
+             <i class="ion-chatbox"></i> Chat
           </ion-item>
         <ion-item menu-close href="#/app/search">
           Search
         </ion-item>
-        <ion-item menu-close href="#/app/logout">
-          Logout
+        <ion-item item-type="item-icon-left" nav-clear menu-close ng-controller ="RegistrationController" ng-click="logout()">
+          <i class="icon ion-log-out"></i> Logout
         </ion-item>
       </ion-list>
     </ion-content>

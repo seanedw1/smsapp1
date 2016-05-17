@@ -67,17 +67,7 @@ smsapp1.run(function($ionicPlatform) {
     views: {
       'menuContent': {
         templateUrl: 'templates/chat.html',
-        authenticate: true
-      }
-    }
-  })
-
-  .state('app.logout', {
-    url: '/logout',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/logout.html',
-        controller:'RegistrationController'
+        authRequired: true
       }
     }
   })
