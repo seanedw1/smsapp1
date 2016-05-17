@@ -72,6 +72,16 @@ smsapp1.run(function($ionicPlatform) {
     }
   })
 
+  .state('app.logout', {
+    url: '/logout',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/logout.html',
+        controller:'RegistrationController'
+      }
+    }
+  })
+
   .state('app.profile', {
       url: '/profile',
       views: {

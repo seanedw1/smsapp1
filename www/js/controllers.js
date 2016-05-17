@@ -15,8 +15,9 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   ['$scope', 'Authentication',
   function($scope, Authentication) {
 
-  $scope.login = function() {
+  $scope.login = function(user) {
     Authentication.login(user);
+    
   }; //login
 
   $scope.logout = function() {

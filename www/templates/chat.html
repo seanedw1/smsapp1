@@ -1,16 +1,19 @@
 <ion-view view-title="chat">
   <ion-content>
+    <label>
+      <h1>chat</h1>
+    </label>
     <div class="chatbox">
-    <header>Chat</header>
-    <div class='example-chat-toolbar'>
-      <label for="nameInput">Username:</label>
-    </div>
-
     <ul id='example-messages' class="example-chat-messages"></ul>
-
-    <footer>
-      <input type='text' id='messageInput'  placeholder='Type a message...'>
-    </footer>
   </div>
+  {{currentUser.username}}
   </ion-content>
+  <ion-footer-bar keyboard-attach class="bar-positive item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="Type your message"  ng-model="data.message"/>
+      </label>
+      <button class="button button-clear" ng-click="sendMessage()">
+        Send
+      </button>
+    </ion-footer-bar>
 </ion-view>

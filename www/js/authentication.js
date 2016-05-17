@@ -12,8 +12,10 @@ smsapp1.factory('Authentication',
       var userRef = new Firebase(FIREBASE_URL + 'users/' + authUser.uid );
       var userObj = $firebaseObject(userRef);
       $rootScope.currentUser = userObj;
+      console.log("logged in" );
     } else {
       $rootScope.currentUser = '';
+      console.log("not logged in");
     }
   });
 
@@ -24,7 +26,7 @@ smsapp1.factory('Authentication',
         email: user.email,
         password: user.password
       }).then(function(regUser) {
-      console.log($scope.user);
+      console.log("success");
       }).catch(function(error) {
        $rootScope.message = error.message;
       });
