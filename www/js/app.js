@@ -57,7 +57,12 @@ smsapp1.run(function($ionicPlatform) {
     url: '/search',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/search.html',
+        resolve: {
+      currentAuth: function(Authentication) {
+        return Authentication.requireAuth();
+      } //current Auth
+    } //resolve
       }
     }
   })
@@ -67,7 +72,11 @@ smsapp1.run(function($ionicPlatform) {
     views: {
       'menuContent': {
         templateUrl: 'templates/chat.html',
-        authRequired: true
+        resolve: {
+      currentAuth: function(Authentication) {
+        return Authentication.requireAuth();
+      } //current Auth
+    } //resolve
       }
     }
   })
@@ -76,7 +85,12 @@ smsapp1.run(function($ionicPlatform) {
       url: '/profile',
       views: {
         'menuContent': {
-          templateUrl: 'templates/profile.html'
+          templateUrl: 'templates/profile.html',
+          resolve: {
+      currentAuth: function(Authentication) {
+        return Authentication.requireAuth();
+      } //current Auth
+    } //resolve
         }
       }
     });

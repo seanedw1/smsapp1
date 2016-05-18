@@ -12,8 +12,8 @@ smsapp1.factory('Authentication',
       var userRef = new Firebase(FIREBASE_URL + 'users/' + authUser.uid );
       var userObj = $firebaseObject(userRef);
       $rootScope.currentUser = userObj;
-      $location.path('./chat');
       console.log("logged in" );
+      $location.path('./chat');
     } else {
       $rootScope.currentUser = '';
       console.log("not logged in");
