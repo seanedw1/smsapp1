@@ -1,8 +1,8 @@
 smsapp1.factory('Authentication',
   ['$rootScope', '$firebaseAuth', '$firebaseObject',
-  '$location', 'FIREBASE_URL',
+  '$location', 'FIREBASE_URL','$state','$ionicHistory',
   function($rootScope, $firebaseAuth, $firebaseObject,
-    $location, FIREBASE_URL) {
+    $location, FIREBASE_URL, $state, $ionicHistory) {
 
   var ref = new Firebase(FIREBASE_URL);
   var auth = $firebaseAuth(ref);
@@ -13,10 +13,15 @@ smsapp1.factory('Authentication',
       var userObj = $firebaseObject(userRef);
       $rootScope.currentUser = userObj;
       console.log("logged in" );
-      $location.path('./chat');
+      $ionicHistory.nextViewOptions({
+   disableBack: true
+ });
+
+      $state.go('app.profile');
     } else {
       $rootScope.currentUser = '';
       console.log("not logged in");
+      $state.go('app.login');
     }
   });
 
@@ -27,7 +32,7 @@ smsapp1.factory('Authentication',
         email: user.email,
         password: user.password
       }).then(function(regUser) {
-        $location.path('/profile');
+
       }).catch(function(error) {
        $rootScope.message = error.message;
       });

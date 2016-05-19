@@ -53,11 +53,11 @@ smsapp1.run(function($ionicPlatform) {
     }
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.todo', {
+    url: '/todo',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html',
+        templateUrl: 'templates/todo.html',
         resolve: {
       currentAuth: function(Authentication) {
         return Authentication.requireAuth();

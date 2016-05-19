@@ -6,10 +6,7 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
-  // Form data for the login modal
 })
-
 
 .controller('RegistrationController',
   ['$scope', 'Authentication',
@@ -17,7 +14,7 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   $scope.login = function(user) {
     Authentication.login(user);
-    
+
   }; //login
 
   $scope.logout = function() {
