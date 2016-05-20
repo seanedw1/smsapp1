@@ -72,6 +72,7 @@ smsapp1.run(function($ionicPlatform) {
     views: {
       'menuContent': {
         templateUrl: 'templates/chat.html',
+        controller:'ChatCtrl',
         resolve: {
       currentAuth: function(Authentication) {
         return Authentication.requireAuth();

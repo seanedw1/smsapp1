@@ -25,4 +25,17 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     Authentication.register(user);
   }; // register
 
-}]); // Controller
+}])
+
+
+
+.controller('ChatCtrl',
+['$scope','Messages',
+function($scope, Messages) {
+
+$scope.addMessage = function(res) {
+  Messages.add();
+};
+
+
+}]); //controller
