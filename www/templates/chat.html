@@ -5,15 +5,15 @@
     </label>
     <ion-list>
             <ion-item ng-repeat="message in messages">
-              {{currentUser.username}} says: {{message.message}}
+              {{message.username}} says: {{message.text}}
             </ion-item>
         </ion-list>
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-positive item-input-inset">
       <label class="item-input-wrapper">
-        <input type="text" placeholder="Type your message"  ng-model="data.message"/>
+        <input type="text" placeholder="Type your message"  ng-model="message.text"/>
       </label>
-      <button class="button button-clear" ng-click="addMessage(data.message)">
+      <button class="button button-clear" ng-click="addMessage(message)">
         Send
       </button>
     </ion-footer-bar>

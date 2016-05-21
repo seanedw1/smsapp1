@@ -1,6 +1,15 @@
 smsapp1.factory('Messages',
-['$rootScope','$firebaseArray','FIREBASE_URL', function($rootScope,$firebaseArray,FIREBASE_URL){
+['$firebaseArray','FIREBASE_URL','$scope', function($firebaseArray,FIREBASE_URL,$scope){
 
   var messagesRef = new Firebase(FIREBASE_URL);
-  return $firebaseArray(messagesRef);
+  $scope.messages = $firebase(messagesRef);
+
+
+myObject = {
+
+add: function(){
+}
+
+};
+return myObject;
 }]);

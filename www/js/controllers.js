@@ -30,11 +30,14 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
 
 .controller('ChatCtrl',
-['$scope','Messages',
-function($scope, Messages) {
+['$scope','Messages','$rootScope',
+function($scope, Messages, $rootScope) {
 
-$scope.addMessage = function(res) {
-  Messages.add();
+
+$scope.addMessage = function(message) {
+  message.username = $rootScope.currentUser.username;
+
+  Messages.add(message.text);
 };
 
 
