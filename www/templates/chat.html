@@ -4,16 +4,16 @@
       <h1>Live chat</h1>
     </label>
     <ion-list>
-            <ion-item ng-repeat="message in messages">
-              {{message.username}} says: {{message.text}}
+            <ion-item ng-repeat="msg in messages">
+          <span id="color">{{msg.username}}</span> says: {{msg.body}}
             </ion-item>
         </ion-list>
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-positive item-input-inset">
       <label class="item-input-wrapper">
-        <input type="text" placeholder="Type your message"  ng-model="message.text"/>
+        <input type="text" placeholder="Type your message"  ng-model="msg.body" ng-keydown="addMessage($event)"/>
       </label>
-      <button class="button button-clear" ng-click="addMessage(message)">
+      <button class="button button-clear" ng-click="sendMsg()">
         Send
       </button>
     </ion-footer-bar>

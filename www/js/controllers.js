@@ -27,18 +27,19 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
 }])
 
+.controller('ChatCtrl',['$scope','$firebaseArray','$firebaseObject','$rootScope', function($scope,$firebaseArray,$firebaseObject,$rootScope) {
 
-
-.controller('ChatCtrl',
-['$scope','Messages','$rootScope',
-function($scope, Messages, $rootScope) {
-
-
-$scope.addMessage = function(message) {
-  message.username = $rootScope.currentUser.username;
-
-  Messages.addMessage(message.text);
-};
-
+   var messagesRef = new Firebase('https://smsapp1.firebaseio.com/');
+         $scope.messages = $firebaseArray(messagesRef);
+        $scope.addMessage = function(e) {
+           $scope.sendMsg = function() {
+                  $scope.messages.$add($scope.msg);
+                  $scope.msg.body = "";
+                  $scope.msg.username = $rootScope.currentUser.username;
+                }
+        }
+        $scope.clear = function(){
+          $scope.name = "";
+        };
 
 }]); //controller
