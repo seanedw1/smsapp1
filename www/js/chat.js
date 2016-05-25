@@ -5,9 +5,9 @@ smsapp1.factory('Messages',
   $scope.messages = $firebase(messagesRef);
 
 
-myObject = {
+Messages = {
 
-add: function(){
+addMessage: function(){
 }
 
 };

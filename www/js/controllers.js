@@ -37,7 +37,7 @@ function($scope, Messages, $rootScope) {
 $scope.addMessage = function(message) {
   message.username = $rootScope.currentUser.username;
 
-  Messages.add(message.text);
+  Messages.addMessage(message.text);
 };
 
 
