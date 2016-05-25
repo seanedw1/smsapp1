@@ -1,0 +1,31 @@
+
+Micheal jackson: "As a developer,
+I am able to able to connect with
+other developers and network."
+
+prince: "As a student, I want to network
+so that I can find current internships."
+
+whitney Houston: "As a business owner, I want to hire a
+developer so that I can update my site."
+
+Celine Dion: "As a product owner, I want to hire a
+developer so that I can scale my site."
+
+elton john : "As a blogger, I want be able to
+find relevant content so that I can update my site content"
+
+Beyonce knowels: "As a conference attendee, I want to be able to
+register online, so i can register quickly."
+
+madonna: "As a app user, I want to be able to
+chat online, so i chat with other conference attendees."
+
+slash: "As a computer user, I want to be able to
+ask questions, so i can grow my knowledge base."
+
+Tina turner: "As a user, I want to be able to
+get notifications, so i know when i receive a new msg."
+
+Bobby brown: "As a user, I want to be able to
+receive a response to input, so i fix my errors."
