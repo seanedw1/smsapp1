@@ -40,10 +40,12 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   };
 }])
 
-.controller('ProfileCtrl',['$scope','$firebaseObject','$rootScope', function($scope,$firebaseObject,$rootScope) {
+.controller('ProfileCtrl',['$scope','$firebaseObject','$rootScope', '$firebaseAuth', function($scope,$firebaseObject,$rootScope, $firebaseAuth) {
 
   var ref = new Firebase('https://smsapp1.firebaseio.com/users/'+$scope.currentUser.$id);
   $scope.user = $firebaseObject(ref);
+  var userObj = $firebaseObject(ref);
+  var auth = $firebaseAuth(ref);
 
   $scope.updateUser = function () {
     $scope.user.$save().then(function(ref) {
@@ -61,7 +63,6 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
       console.log("Error:", error);
     });
   };
-
   // ng-models = $scope.user.whateverYouHave
   // ng-submit = updateUser
   // in updateUser() update with $scope.user
