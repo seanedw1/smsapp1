@@ -47,7 +47,16 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   $scope.updateUser = function () {
     $scope.user.$save().then(function(ref) {
-      ref.key() === userObj.$id; // true
+      ref.key() === userObj.$uid; // true
+    }, function(error) {
+      console.log("Error:", error);
+    });
+  };
+
+  $scope.DeleteUser = function () {
+    $scope.user.$remove().then(function(ref) {
+      ref.key() === userObj.$uid; // true
+      return auth.$unauth();
     }, function(error) {
       console.log("Error:", error);
     });
