@@ -1,17 +1,29 @@
 <ion-view view-title="My Profile">
   <ion-content class="padding">
+
     <h1>Welcome <br>{{currentUser.username}}</h1>
+
+    <form name="myform" ng-submit="updateUser(user)">
     <label for="">
-      <p>first name: {{currentUser.firstname}}</p>
+      <p>first name: <input type="text" ng-model="user.firstname" placeholder="{{currentUser.firstname}}"></p>
     </label>
+
     <label for="">
-      <p>last name: {{currentUser.lastname}}</p>
+      <p>last name: <input type="text" ng-model="user.lastname" placeholder="{{currentUser.lastname}}"></p>
     </label>
+
     <label for="">
-      <p>username: {{currentUser.username}}</p>
+      <p>username: <input type="text" ng-model="user.username" placeholder="{{currentUser.username}}"></p>
     </label>
+
     <label for="">
-      <p>email: {{currentUser.email}}</p>
+      <p>email: <input type="text" ng-model="user.email" placeholder="{{currentUser.email}}"></p>
     </label>
+
+      <button class="button button-block button-balanced" type="submit">Update profile</button>
+  </form>
   </ion-content>
 </ion-view>
+
+
+<span class="input-label">Username</span>

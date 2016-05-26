@@ -29,17 +29,39 @@ smsapp1.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
 .controller('ChatCtrl',['$scope','$firebaseArray','$firebaseObject','$rootScope', function($scope,$firebaseArray,$firebaseObject,$rootScope) {
 
-   var messagesRef = new Firebase('https://smsapp1.firebaseio.com/');
-         $scope.messages = $firebaseArray(messagesRef);
-        $scope.addMessage = function(e) {
-           $scope.sendMsg = function() {
-                  $scope.messages.$add($scope.msg);
-                  $scope.msg.body = "";
-                  $scope.msg.username = $rootScope.currentUser.username;
-                }
-        }
-        $scope.clear = function(){
-          $scope.name = "";
-        };
+  var messagesRef = new Firebase('https://smsapp1.firebaseio.com/chat');
+  $scope.messages = $firebaseArray(messagesRef);
+
+  $scope.sendMsg = function() {
+    $scope.msg.username = $rootScope.currentUser.username;
+    $scope.messages.$add($scope.msg).then(function(ref) {
+        $scope.msg.body = "";
+    });
+  };
+}])
+
+.controller('ProfileCtrl',['$scope','$firebaseObject','$rootScope', function($scope,$firebaseObject,$rootScope) {
+
+  var ref = new Firebase('https://smsapp1.firebaseio.com/users/'+$scope.currentUser.$id);
+  $scope.user = $firebaseObject(ref);
+
+  $scope.updateUser = function () {
+    $scope.user.$save().then(function(ref) {
+      ref.key() === userObj.$id; // true
+    }, function(error) {
+      console.log("Error:", error);
+    });
+  };
+
+  // ng-models = $scope.user.whateverYouHave
+  // ng-submit = updateUser
+  // in updateUser() update with $scope.user
+  /*
+
+    $scope.user = $firebaseObject(ref);
+
+
+
+  */
 
 }]); //controller

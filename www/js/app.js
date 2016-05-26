@@ -87,6 +87,7 @@ smsapp1.run(function($ionicPlatform) {
       views: {
         'menuContent': {
           templateUrl: 'templates/profile.html',
+          controller:'ProfileCtrl',
           resolve: {
       currentAuth: function(Authentication) {
         return Authentication.requireAuth();
