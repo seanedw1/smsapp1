@@ -7,6 +7,8 @@ A ionic and firebase chat application
 
 * [Ionic](#ionic)
 * [Firebase](#firebase)
+* [Install ionic](#install-ionic)
+* [Test app](#test-this-app)
 * [Contributors](#contributors)
 
 
@@ -34,7 +36,7 @@ In the command line run
 npm install -g ionic cordova
 ```
 
-### Run your app
+### Test this app
 
 Test your app in the browser
 
