@@ -32,9 +32,9 @@ In the command line run
 ionic serve
 ```
 
-### Test app live
+### Ionic view
 
-Test app live on mobile device
+ionic view allows you to quickly test ionic apps live on mobile devices.
 
 * [Ionic View](http://view.ionic.io/?_ga=1.29680892.2104877837.1488776427)
 
