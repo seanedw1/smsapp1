@@ -4,9 +4,13 @@ A ionic and firebase chat application
 
 ### Ionic
 
+
+
 * [Ionic](https://ionicframework.com/)
 
 ### Firebase
+
+firebase is a realtime database and back end as a service. when using firebase with ionic angularfire must be used. As ionic is built with angular. 
 
 * [Firebase](https://firebase.google.com/)
 * [angularfire](angularfire)
