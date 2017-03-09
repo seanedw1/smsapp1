@@ -21,7 +21,7 @@ ionic is a open source framework used for developing mobile apps.
 firebase is a realtime database and back end as a service. when using firebase with ionic angularfire must be used. As ionic is built with angular.
 
 * [Firebase](https://firebase.google.com/)
-* [angularfire](angularfire)
+* [Angularfire](https://github.com/firebase/angularfire)
 
 
 ### Install ionic
