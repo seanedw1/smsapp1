@@ -2,15 +2,23 @@
 
 A ionic and firebase chat application
 
+
+## Table of contents
+
+* [Ionic](#ionic)
+* [Firebase](#firebase)
+* [Contributors](#contributors)
+
+
 ### Ionic
 
-
+ionic is a open source framework used for developing mobile apps.
 
 * [Ionic](https://ionicframework.com/)
 
 ### Firebase
 
-firebase is a realtime database and back end as a service. when using firebase with ionic angularfire must be used. As ionic is built with angular. 
+firebase is a realtime database and back end as a service. when using firebase with ionic angularfire must be used. As ionic is built with angular.
 
 * [Firebase](https://firebase.google.com/)
 * [angularfire](angularfire)
