@@ -7,6 +7,7 @@ A ionic and firebase chat application
 
 * [Ionic](#ionic)
 * [Firebase](#firebase)
+* [Ionic view](#ionic-view)
 * [Install ionic](#install-ionic)
 * [Test app](#test-this-app)
 * [Contributors](#contributors)
@@ -24,6 +25,12 @@ firebase is a realtime database and back end as a service. when using firebase w
 
 * [Firebase](https://firebase.google.com/)
 * [Angularfire](https://github.com/firebase/angularfire)
+
+### Ionic view
+
+ionic view allows you to quickly test ionic apps live on mobile devices.
+
+* [Ionic View](http://view.ionic.io/?_ga=1.29680892.2104877837.1488776427)
 
 
 ### Install ionic
@@ -45,12 +52,6 @@ In the command line run
 ```
 ionic serve
 ```
-
-### Ionic view
-
-ionic view allows you to quickly test ionic apps live on mobile devices.
-
-* [Ionic View](http://view.ionic.io/?_ga=1.29680892.2104877837.1488776427)
 
 
 ##### Contributors
